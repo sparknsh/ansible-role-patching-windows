@@ -1,8 +1,10 @@
 # Ansible Role: Patching Windows
 
-#### Version: 1.0.0
+#### Version: 1.0.1
 
 [![pipeline status](https://gitlab.com/sparknsh/ansible-role-patching-windows/badges/master/pipeline.svg)](https://gitlab.com/sparknsh/ansible-role-patching-windows/commits/master)
+[![Ansible Role](https://img.shields.io/ansible/role/30024.svg)](https://galaxy.ansible.com/sparknsh/patching_windows)
+[![Ansible Role](https://img.shields.io/ansible/role/d/30024.svg)](https://galaxy.ansible.com/sparknsh/patching_windows)
 
 Development of this project is managed in a private repository then pushed out to [GitLab](https://gitlab.com/sparknsh/ansible-role-patching-windows) and [GitHub](https://github.com/sparknsh/ansible-role-patching-windows) when we have a new version for you. If you have any issues please contact [sparknsh](https://www.sparknsh.com/contact?type=issue&name=ansible-role-patching-windows)
 
