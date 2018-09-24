@@ -1,0 +1,37 @@
+---
+
+- name: Install Windows updates
+  win_updates:
+    category_names: "{{ patching_windows_categories }}"
+  register: win_updates_result
+  failed_when: win_updates_result.failed is defined and win_updates_result.failed and patching_windows_reboot == False
+
+- name: Reboot and Retry
+  when:
+    - patching_windows_reboot
+    - win_updates_result.failed is defined
+    - win_updates_result.failed
+  block:
+
+  - name: Reboot Windows to re-try update installation
+    win_reboot:
+      shutdown_timeout_sec: 3600
+      reboot_timeout_sec: 3600
+    when:
+      - win_updates_result.msg is defined
+      - win_updates_result.msg == "A reboot is required before more updates can be installed"
+
+  - name: Install Windows updates again
+    win_updates:
+      category_names: "{{ patching_windows_categories }}"
+    register: win_updates_result
+
+
+- name: Reboot when updates installed
+  win_reboot:
+    shutdown_timeout_sec: 3600
+    reboot_timeout_sec: 3600
+  when:
+    - win_updates_result.reboot_required is defined
+    - win_updates_result.reboot_required == True
+    - patching_windows_reboot

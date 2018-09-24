@@ -1,0 +1,7 @@
+---
+
+script:
+  - echo "Testing done in GitLab visit https://gitlab.com/sparknsh/ansible-role-patching-windows"
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/

@@ -1,0 +1,5 @@
+.DS_Store
+*.retry
+tests/test.sh
+*.sublime-project
+*.sublime-workspace

@@ -1,0 +1,7 @@
+---
+
+patching_windows_reboot: False
+patching_windows_categories:
+  - "CriticalUpdates"
+  - "SecurityUpdates"
+  - "Updates"
