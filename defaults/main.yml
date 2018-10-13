@@ -1,6 +1,7 @@
 ---
 
 patching_windows_reboot: False
+patching_windows_reboot_timeout: 3600
 patching_windows_categories:
   - "CriticalUpdates"
   - "SecurityUpdates"

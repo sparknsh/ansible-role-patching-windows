@@ -1,6 +1,6 @@
 # Ansible Role: Patching Windows
 
-#### Version: 1.0.1
+#### Version: 1.0.2
 
 [![pipeline status](https://gitlab.com/sparknsh/ansible-role-patching-windows/badges/master/pipeline.svg)](https://gitlab.com/sparknsh/ansible-role-patching-windows/commits/master)
 [![Ansible Role](https://img.shields.io/ansible/role/30024.svg)](https://galaxy.ansible.com/sparknsh/patching_windows)
@@ -12,6 +12,7 @@ Development of this project is managed in a private repository then pushed out t
 
 ```yaml
 patching_windows_reboot: False
+patching_windows_reboot_timeout: 3600
 patching_windows_categories:
   - "CriticalUpdates"
   - "SecurityUpdates"
