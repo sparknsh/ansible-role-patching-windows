@@ -8,8 +8,6 @@
   register: win_updates_result
   failed_when: not patching_windows_reboot and win_updates_result.failed is defined and win_updates_result.failed
 
-- debug: var="win_updates_result"
-
 - name: Reboot and Retry
   when: patching_windows_reboot and win_updates_result.msg is defined and win_updates_result.msg == "A reboot is required before more updates can be installed"
   block:

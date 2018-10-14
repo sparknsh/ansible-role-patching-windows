@@ -1,6 +1,6 @@
 # Ansible Role: Patching Windows
 
-#### Version: 1.0.2
+#### Version: 1.0.3
 
 [![pipeline status](https://gitlab.com/sparknsh/ansible-role-patching-windows/badges/master/pipeline.svg)](https://gitlab.com/sparknsh/ansible-role-patching-windows/commits/master)
 [![Ansible Role](https://img.shields.io/ansible/role/30024.svg)](https://galaxy.ansible.com/sparknsh/patching_windows)
